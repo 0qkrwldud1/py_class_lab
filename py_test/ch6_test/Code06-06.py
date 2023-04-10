@@ -1,4 +1,4 @@
-with open("C:/CookAnalysis/CSV/singer2.csv", "r") as inFp :
+with open("CSV/singer2.csv", "r", encoding="utf-8") as inFp :
     header = inFp.readline()
     header = header.strip()
     header_list = header.split(',')

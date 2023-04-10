@@ -31,13 +31,13 @@ rowNum = len(csvList)
 colNum = len(csvList[0])
 workSheet = makeEmptySheet(rowNum, colNum)
 
-idx = 6 # 평균 키의 인덱스
+idx = 2 # 평균 키의 인덱스
 for i in range(0, rowNum) : # 워크시트에 리스트값 채우기. (= 각 빈 셀에 값 넣기)
     for k in range(0, colNum) :
         if ( csvList[i][idx].isnumeric() ) :
-            if ( int(csvList[i][idx]) >= 167) :
-                ent = workSheet[i][k]
-                ent.configure(bg='yellow')
+            if ( int(csvList[i][idx]) >= 7) :
+                ent = workSheet[i][2]
+                ent.configure(bg='pink')
         workSheet[i][k].insert(0, csvList[i][k])
 
 window.mainloop()

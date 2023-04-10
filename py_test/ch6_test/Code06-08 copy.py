@@ -9,10 +9,13 @@ with open("CSV/singerA.csv", "r", encoding="utf-8") as inFpA :
             header_list = next(csvReaderA)
             header_list = next(csvReaderB)
             csvWriter.writerow(header_list)
-            
+
+
             for row_list in csvReaderA:
-                csvWriter.writerow(row_list)
+                if int(row_list[6]) >= 165:
+                    csvWriter.writerow(row_list)
             for row_list in csvReaderB:
-                csvWriter.writerow(row_list)
+                if int(row_list[6]) >= 165:
+                    csvWriter.writerow(row_list)
 
 print('Save. OK~')
