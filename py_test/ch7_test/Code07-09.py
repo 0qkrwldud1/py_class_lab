@@ -1,6 +1,6 @@
 import openpyxl
 
-workbook = openpyxl.load_workbook('c:/CookAnalysis/Excel/singer.xlsx')
+workbook = openpyxl.load_workbook('Excel/singer.xlsx')
 wsheetList = workbook.sheetnames
 
 for wsName in wsheetList :

@@ -9,8 +9,13 @@ outWorkbook.remove(outWorkbook['Sheet']) # 기본으로 생성된 시트를 일�
 
 for wsName in wsheetList :
     worksheet = workbook[wsName]
-    outSheet = outWorkbook.create_sheet(wsName)
+    outSheet = outWorkbook.create_sheet('New_' + wsName)
+    totRow = 0 # 출력용 엑셀의 행번호
     for row in range(1, worksheet.max_row+1) :
+        if row != 1 :
+            if int(worksheet.cell(row=row, column=5).value) <= 165 :
+                continue
+        totRow += 1
         outSheet.row_dimensions[row].height = worksheet.row_dimensions[row].height
         for col in range(1, worksheet.max_column+1) :
             outSheet.column_dimensions[chr(ord('A')+col-1)].width \
@@ -24,5 +29,5 @@ for wsName in wsheetList :
                 outCell.number_format = copy(inCell.number_format)
                 outCell.alignment = copy(inCell.alignment)
 
-outWorkbook.save('Excel/singer_copy.xlsx')
+outWorkbook.save('Excel/singer_copy2-1.xlsx')
 print("Save. OK~")

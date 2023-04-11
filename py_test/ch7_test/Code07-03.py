@@ -1,6 +1,6 @@
 import xlrd
 
-workbook = xlrd.open_workbook('c:/CookAnalysis/Excel/singer.xls')
+workbook = xlrd.open_workbook('Excel/singer.xls')
 sheetCount = workbook.nsheets
 
 personNum = 0

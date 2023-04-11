@@ -1,7 +1,7 @@
 from tkinter import *
 import xlsxwriter
 window = Tk()
-photo = PhotoImage(file = 'C:/CookAnalysis/GIF/pic7.gif')
+photo = PhotoImage(file = 'GIF/pic7.gif')
 h = photo.height()
 w = photo.width()
 
@@ -16,7 +16,7 @@ for i in range(w) :
         photoG[i][k] = g
         photoB[i][k] = b
 
-workbook = xlsxwriter.Workbook('C:/CookAnalysis/Excel/pic7.xlsx')
+workbook = xlsxwriter.Workbook('Excel/pic7.xlsx')
 worksheetR = workbook.add_worksheet('photoR')
 worksheetG = workbook.add_worksheet('photoG')
 worksheetB = workbook.add_worksheet('photoB')

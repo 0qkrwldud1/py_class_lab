@@ -1,7 +1,7 @@
 import xlrd
 import csv
 
-workbook = xlrd.open_workbook('c:/CookAnalysis/Excel/singer.xls')
+workbook = xlrd.open_workbook('Excel/singer.xls')
 
 findColumn = ['이름', '주소', '유튜브 조회수']
 findIndex = []
@@ -13,7 +13,7 @@ for name in findColumn :
     findIndex.append(header_list.index(name))
 
 wsheetList = workbook.sheets()
-with open("C:/CookAnalysis/Excel/singer_youtube.csv", "w", newline='') as outFp:
+with open("Excel/singer_youtube.csv", "w", newline='') as outFp:
     csvWriter = csv.writer(outFp)
     csvWriter.writerow(findColumn)
     for worksheet in wsheetList :

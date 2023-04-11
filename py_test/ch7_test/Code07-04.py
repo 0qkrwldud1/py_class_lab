@@ -1,7 +1,7 @@
 import xlrd
 import xlwt
 
-workbook = xlrd.open_workbook('c:/CookAnalysis/Excel/singer.xls')
+workbook = xlrd.open_workbook('Excel/singer.xls')
 outWorkbook = xlwt.Workbook()
 
 wsheetList = workbook.sheets()
@@ -11,5 +11,5 @@ for worksheet in wsheetList :
         for col in range(worksheet.ncols) :
             outSheet.write(row, col, worksheet.cell_value(row, col))
 
-outWorkbook.save('c:/CookAnalysis/Excel/outSinger1.xls')
+outWorkbook.save('Excel/outSinger1.xls')
 print("Save. OK~")
