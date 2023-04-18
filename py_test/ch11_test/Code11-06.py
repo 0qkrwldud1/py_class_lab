@@ -22,5 +22,5 @@ plt.show()
 
 writer = pd.ExcelWriter(outFilename)
 df_singer_over6.to_excel(writer, sheet_name='singer', index=False)
-writer.save()
+writer.closes()
 print('Save. OK~')
